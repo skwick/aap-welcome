@@ -1,0 +1,9 @@
+---
+- name: Welcome message
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Print welcome message
+      ansible.builtin.debug:
+        msg: "Welcome {{ tower_user_name | default('Guest') }} in ansible automation platform dashboard."
